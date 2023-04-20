@@ -8,6 +8,7 @@
 
 <p>
     <a asp-action="Create">Create New</a>
+    <a asp-controller="AzureTables" asp-action="ClientesEmpresa">Buscar clientes</a>
 </p>
 <table class="table">
     <thead>
@@ -68,10 +69,10 @@
             </td>
             <td>
                <a asp-controller="AzureTables" asp-action="Details"
-               asp-route-partitionkey="@item.PartitionKey" asp-route-rowkey="@item.RowKey">DETAILS</a>
+               asp-route-partitionkey="@item.PartitionKey" asp-route-rowkey="@item.RowKey" class="btn btn-info">DETAILS</a>
 
                <a asp-controller="AzureTables" asp-action="Delete"
-               asp-route-partitionkey="@item.PartitionKey" asp-route-rowkey="@item.RowKey">DELETE</a>
+               asp-route-partitionkey="@item.PartitionKey" asp-route-rowkey="@item.RowKey" class="btn btn-danger">DELETE</a>
 
             </td>
         </tr>
